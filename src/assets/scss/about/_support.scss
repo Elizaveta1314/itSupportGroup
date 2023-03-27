@@ -229,11 +229,11 @@
     border-radius: 10px;
     height: 150px;
     top: -170px;
-    right: 130px;
+    right: 77px;
     @include respond(tab-land ) {
         bottom: 0px;
         top: -60rem;
-        right: 160px;
+        right: 113px;
         height: 513px;
     }
     @include respond(phone-min) {
@@ -349,5 +349,11 @@
     @include respond(phone) {
         top: -207px;
         left: 129px;
+    }
+}
+.left-posittion:hover {
+    transform: translateX(-50px);
+    @include respond(phone) {
+        transform: translateX(0);
     }
 }

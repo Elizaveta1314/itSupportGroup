@@ -95,14 +95,18 @@
     }
 
 }
-
+.margin-top-190 {
+    margin-top: 185px;
+    @include respond( big-screen-min) {
+        margin-top: 0;
+    }
+}
 .form__contact {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: 5.05rem;
-    margin-top: 194px;
     @include respond( big-screen-min) {
         margin-top: 0;
     }

@@ -534,7 +534,7 @@ header {
 }
 
 .footer__bottom {
-    padding: 5rem 0 10rem 0;
+    padding: 5rem 0 5rem 0;
 }
 
 @media (max-width: 850px) {
@@ -1352,6 +1352,7 @@ header {
 }
 
 .btn_form {
+    cursor: pointer;
     max-width: 205px;
     padding: 1.95rem 8.4rem 1.95rem 4rem;
     font-size: 2rem;
@@ -1362,6 +1363,21 @@ header {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
+    background-position-x: 100%;
+    transition: background 10s ease-out;
+    z-index: 30;
+}
+
+.btn_form::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #2F353F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 0.35s;
 }
 
 @media (max-width: 850px) {
@@ -1404,6 +1420,36 @@ header {
     left: 0;
     transform: translateX(-100%);
     transition: 0.35s;
+}
+
+.btn_form:hover .text-color-btn {
+    position: relative;
+    z-index: 100;
+    color: #fff;
+}
+
+.btn_form:hover::after {
+    position: absolute;
+    content: url("../img/btn-arrow/arrow-24-white.svg");
+    width: 24px;
+    height: 24px;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 850px) {
+    .btn_form:hover::after {
+        content: url("../img/btn-arrow/arrow-12-white.svg");
+        width: 12px;
+        height: 12px;
+        right: 2rem;
+    }
+}
+
+.btn_form:hover:before {
+    z-index: 0;
+    transform: translateX(0);
 }
 
 .btn_slider {
@@ -4486,14 +4532,14 @@ input:active {
     border-radius: 10px;
     height: 150px;
     top: -170px;
-    right: 130px;
+    right: 77px;
 }
 
 @media (max-width: 1080px) {
     .block-text-22::before {
         bottom: 0px;
         top: -60rem;
-        right: 160px;
+        right: 113px;
         height: 513px;
     }
 }
@@ -4655,6 +4701,16 @@ input:active {
     .block-text-20::before {
         top: -207px;
         left: 129px;
+    }
+}
+
+.left-posittion:hover {
+    transform: translateX(-50px);
+}
+
+@media (max-width: 650px) {
+    .left-posittion:hover {
+        transform: translateX(0);
     }
 }
 
@@ -5129,13 +5185,22 @@ input:active {
     }
 }
 
+.margin-top-190 {
+    margin-top: 185px;
+}
+
+@media (max-width: 1400px) {
+    .margin-top-190 {
+        margin-top: 0;
+    }
+}
+
 .form__contact {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: 5.05rem;
-    margin-top: 194px;
 }
 
 @media (max-width: 1400px) {
