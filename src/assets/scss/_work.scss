@@ -1,0 +1,190 @@
+.work {
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-weight: 400;
+        font-size: 2.6rem;
+        @include respond(big-1600) {
+            font-size: 4rem;
+        }
+        @include respond(phone-min) {
+            font-size: 1.6rem;
+        }
+        &-one {
+            max-width: 540px;
+            padding: 5rem 4.6rem 7rem 5rem;
+            color: $color-light-black;
+            height: 174px;
+            @include respond(big-1600) {
+                max-width: 100%;
+                padding: 0rem 5rem 8rem 0rem;
+                border-radius: 50px;
+                height: auto;
+                min-width: 100%;
+                transition: .4s all;
+            }
+            @include respond(phone-min) {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+            &:hover {
+                transform: translateY(-19rem) translateX(-1.5rem) scale(1.03);
+                background: url('../img/hover.png') no-repeat center / cover;
+                border: 1px solid rgba(47, 53, 63, 0.5);
+                border-radius: 40px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                color: $color-white;
+                height: auto;
+                margin-bottom: -174px;
+                padding: 5rem 5rem 5rem 5rem;
+                @include respond(big-1600) {
+                    box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+                    transform: translateY(0rem) translateX(0rem) scale(1.03);
+                    margin-bottom: 0px;
+                    border-radius: 50px;
+                }
+                @include respond(phone-min) {
+                    padding: 2rem;
+                    border-radius: 16px;
+                }
+            }
+        }
+        &-inner {
+            padding: 5rem 4.6rem 7rem 5rem;
+            border: 1px solid rgba(47, 53, 63, 0.5);
+            border-radius: 40px;
+            margin: -1px -1px 0 0;
+            min-width: 540px;
+            cursor: pointer;
+            height: 174px; 
+            @include respond(big-1600) {
+                padding: 5rem;
+                border-radius: 50px;
+                height: 250px;
+                min-width: 100%;
+                transition: .4s all;
+            }
+            @include respond(phone-min) {
+                padding: 2rem;
+                border-radius: 16px;
+                height: auto;
+            }
+            &:hover {
+                height: auto;
+                margin-bottom: -174px;
+                border-radius: 50px;
+                @include respond(phone-min) {
+                    border-radius: 16px;
+                }
+            }
+            &-title {
+                font-weight: 400;
+                font-size: 26px;
+                line-height: 150%;
+                max-width: 440px;
+                @include respond(big-1600) {
+                    font-size: 5rem;
+                    max-width: 100%;
+                }
+                @include respond(phone-min) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
+    color: $color-rgba-1;
+    font-family: 'Gilroy';
+    font-size: 2.4rem;
+    line-height: 150%;
+    font-weight: 400;
+    margin-top: 2rem;
+    @include respond(big-1600) {
+        font-size: 4.6rem;
+        margin-top: 5rem;
+    }
+    @include respond(phone-min) {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+.work__wrapper-inner:hover .hidden {
+    display: block;
+    max-width: 440px;
+    @include respond(big-1600) {
+        max-width: 100%;
+    }
+}
+.work__wrapper-one:hover .hidden {
+    display: block;
+    max-width: 440px;
+    @include respond(big-1600) {
+        max-width: 100%;
+    }
+}
+.work__wrapper-inner:hover .work__wrapper-inner-title{
+    color: $color-white;
+}
+.hover-1 {
+    &:hover {
+        transform: translateY(-19rem) scale(1.03);
+        background: url('../img/hover.png') no-repeat center / cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include respond(big-1600) {
+            transform: translateY(0rem) scale(1.03);
+            box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+            margin-bottom: 0px;
+        }
+    }
+}
+.hover-2 {
+    &:hover {
+        transform: translateY(-19rem) translateX(1.5rem) scale(1.03);
+        background: url('../img/hover.png') no-repeat center / cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include respond(big-1600) {
+            transform: translateY(0rem) translateX(0rem) scale(1.03);
+            box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+            margin-bottom: 0px;
+        }
+    }
+}
+.hover-3 {
+    &:hover {
+        transform: translateY(1.5rem) translateX(-1.5rem) scale(1.03);
+        background: url('../img/hover.png') no-repeat center / cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include respond(big-1600) {
+            transform: translateY(0rem) translateX(0rem) scale(1.03);
+            box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+            margin-bottom: 0px;
+        }
+    }
+}
+.hover-4 {
+    &:hover {
+        transform: translateY(1.5rem) scale(1.03);
+        background: url('../img/hover.png') no-repeat center / cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include respond(big-1600) {
+            transform: translateY(0rem) scale(1.03);
+            box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+            margin-bottom: 0px;
+        }
+    }
+}
+.hover-5 {
+    &:hover {
+        transform: translateY(1.5rem) translateX(1.5rem) scale(1.03);
+        background: url('../img/hover.png') no-repeat center / cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        @include respond(big-1600) {
+            transform: translateY(0rem) translateX(0rem) scale(1.03);
+            box-shadow: 0px 30px 20px -10px rgba(39, 24, 83, 0.12);
+            margin-bottom: 0px;
+        }
+    }
+}

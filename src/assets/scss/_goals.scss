@@ -1,0 +1,125 @@
+.goals {
+    &__wrapp {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 500px);
+        grid-auto-rows: 500px;
+        grid-template-areas: 
+            "card-1 card-1 card-2 card-2 card-3 card-3"
+            "card-4 card-4 card-4 card-5 card-5 card-5"
+            "card-6 card-6 card-6 card-6 card-7 card-7";
+        @include respond(big-1600) {
+            grid-template-rows: repeat(7, 683px);
+            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5"
+            "card-6"
+            "card-7";
+        }    
+        @include respond(phone-min) {
+            grid-template-rows: repeat(7, 232px);
+        }
+        &-card {
+            border: 1px solid $color-light-blue;
+            border-radius: 70px;
+            text-align: left;
+            margin: -1px -1px 0 0;
+            @include respond(big-1600) {
+                border-radius: 50px;
+            }
+            @include respond(phone-min) {
+                border-radius: 16px;
+            }
+            &_title-1 {
+                padding: 14.4rem 0 2.5rem 0;
+                @include respond(big-1600) {
+                    padding: 8.4rem 0 2rem 0;
+                }
+                @include respond(phone-min) {
+                    padding: 3rem 0 1rem 0;
+                }
+            }
+            &_title-2 {
+                padding: 7.2rem 0 2.5rem 0;
+                @include respond(big-1600) {
+                    padding: 8.4rem 0 2rem 0;
+                }
+                @include respond(phone-min) {
+                    padding: 3rem 0 1rem 0;
+                }
+            }
+            &_title-3 {
+                padding: 18rem 0 2.5rem 0;
+                @include respond(big-1600) {
+                    padding: 6rem 0 2rem 0;
+                }
+                @include respond(phone-min) {
+                    padding: 3rem 0 1rem 0;
+                }
+            }
+            &_title-4 {
+                padding: 19.8rem 0 2.5rem 0;
+                @include respond(big-1600) {
+                    padding: 15rem 0 5rem 0;
+                }
+                @include respond(phone-min) {
+                    padding: 3rem 0 1rem 0;
+                }
+            }
+        }
+        &-img {
+            img {
+                max-width: 100%;
+                height: 100%;
+                width: 100%;
+                border-radius: 70px;
+                @include respond(big-1600) {
+                    border-radius: 50px;
+                }
+                @include respond(phone-min) {
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+    &-text {
+        font-family: 'Gilroy';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: $color-rgba;
+        @include respond(big-1600) {
+            font-size: 40px;
+        }
+        @include respond(phone-min) {
+            font-size: 14px;
+        }
+    }
+}
+.card-1 {
+    grid-area: card-1;
+}
+.card-2 {
+    grid-area: card-2;
+}
+.card-3 {
+    grid-area: card-3;
+    width: 100%;
+}
+.card-4 {
+    grid-area: card-4;
+}
+.card-5 {
+    grid-area: card-5;
+}
+.card-6 {
+    grid-area: card-6;
+}
+.card-7 {
+    grid-area: card-7;
+}

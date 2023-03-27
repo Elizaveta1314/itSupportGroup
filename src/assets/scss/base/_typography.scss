@@ -1,0 +1,294 @@
+.text-center {
+    text-align: center;
+}
+.titel-20 {
+    font-size: 2rem;
+    line-height: 1.9rem;
+    @include respond(tab-content) {
+        font-size: 3rem;
+        line-height: 29px;
+    }
+    @include respond(phone-min) {
+        font-size: 1rem;
+        line-height: 10px;
+    }
+}
+.title-one {
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 130%;
+    @include respond(tab-content) {
+        font-size: 12rem;
+    }
+    @include respond(phone-min) {
+        font-size: 3.8rem;
+        max-width: 538px;
+    }
+}
+.title-second {
+    font-size: 6rem;
+    line-height: 150%;
+    font-weight: 400;
+    @include respond(big-1600) {
+        font-size: 8rem;
+        line-height: 7.7rem;
+    }
+    @include respond(phone-min) {
+        font-size: 2.8rem;
+        line-height: 27px;
+    }
+}
+.title-third {
+    font-size: 3.2rem;
+    line-height: 150%;
+    @include respond(phone-min) {
+        font-size: 14px;
+    }
+}
+.title-third-card {
+    font-size: 3.2rem;
+    line-height: 150%;
+    @include respond(big-1600) {
+        font-size: 6rem;
+    }
+    @include respond(phone-min) {
+        font-size: 16px;
+    }
+}
+.title-four {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 130%;
+    text-transform: uppercase;
+    @include respond(big-1600) {
+        font-size: 5rem;
+    }
+    @include respond(phone-min) {
+        font-size: 1.6rem;
+    }
+
+}
+.title-five {
+    font-size: 2.6rem;
+    line-height: 150%;
+    font-weight: 400;
+    @include respond(big-1600) {
+        font-size: 5rem;
+        color: $color-rgba;
+    }
+    @include respond(phone-min) {
+        font-size: 16px;
+    }
+}
+.title-text26 {
+    font-size: 2.6rem;
+    line-height: 13rem;
+}
+.title-text40 {
+    font-size: 4rem;
+    line-height: 150%;
+    @include respond(big-screen-min) {
+        font-size: 6rem;
+        line-height: 58px;
+        color: $color-blue
+    }
+    @include respond(phone-min) {
+        font-size: 18px;
+        line-height: 17px;
+    }
+}
+.title-text60 {
+    font-size: 6rem;
+    line-height: 150%;
+    @include respond(phone-min) {
+        font-size: 16px;
+    }
+}
+.text-form {
+    font-size: 10rem;
+    line-height: 130%;
+    font-weight: 400;
+    color: $color-white;
+    @include respond(big-1780) {
+        font-size: 8rem;
+    }
+    @include respond(big-1600) {
+        font-size: 10rem;
+    }
+    @include respond(phone-min) {
+        font-size: 27px;
+        line-height: 32px;
+    }
+}
+
+
+//Gilroy 400
+.text-24 {
+    font-family: 'Gilroy';
+    font-size: 2.4rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: $color-rgba-1;
+    @include respond(tab-content) {
+        font-size: 4rem;
+    }
+    @include respond(phone-min) {
+        font-size: 12px;
+    }
+}
+.text-24-color {
+    font-family: 'Gilroy';
+    font-size: 2.4rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: $color-rgba;
+    @include respond(tab-content) {
+        font-size: 4.4rem;
+    }
+    @include respond(phone-min) {
+        font-size: 1.2rem;
+    }
+}
+.are__wrapp-card-item.text-24-color:hover {
+    color: $color-white;
+}
+.text-18 {
+    font-family: 'Gilroy';
+    font-size: 1.8rem;
+    line-height: 13rem;
+    color: $color-rgba;
+}
+.text-20 {
+    font-family: 'Gilroy';
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+.text-28 {
+    font-family: 'Gilroy';
+    font-size: 2.8rem;
+    line-height: 150%;
+    color: $color-rgba;
+    @include respond(big-1780) {
+        font-size: 5rem;
+    }
+    @include respond(phone-min) {
+        font-size: 14px;
+    }
+}
+.text-30 {
+    font-family: 'Gilroy';
+    font-size: 3rem;
+    line-height: 150%;
+    color: $color-rgba;
+    font-weight: 400;
+    @include respond(big-1600) {
+        font-size: 4rem;
+    }
+    @include respond(phone-min) {
+        font-size: 1.2rem;
+    }
+}
+.text-blue {
+    font-size: 4rem;
+    line-height: 39px;
+    color: $color-blue;
+    font-weight: 400;
+    @include respond(big-1600) {
+        font-size: 76px;
+        line-height: 73px;
+    }
+    @include respond(phone-min) {
+        font-size: 24px;
+        line-height: 23px;
+    }
+}
+//breadcrumds
+.breadcrumds-titel-20 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-transform: lowercase;
+    color: $color-blue;
+    @include respond(big-1780) {
+        font-size: 4rem;
+        line-height: 3.9rem;
+    }
+    @include respond(phone-min ) {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+.breadcrumds-titel-20w {
+    a {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.9rem;
+        text-transform: lowercase;
+        color: $color-white;
+        @include respond(big-1780) {
+            font-size: 4rem;
+            line-height: 3.9rem;
+        }
+        @include respond(phone-min ) {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+    span {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.9rem;
+        text-transform: lowercase;
+        color: rgba(255, 255, 255, 0.5);
+        @include respond(big-1600) {
+            font-size: 4rem;
+            line-height: 3.9rem;
+        }
+        @include respond(phone-min ) {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+}
+//footer
+
+.link-blue {
+    color: $color-blue;
+    @include respond(tab-content) {
+        font-size: 34px;
+        line-height: 150%;
+    }
+    
+    @include respond(phone-min) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+.link-gray {
+    color: $color-rgba-2;
+    @include respond(tab-content) {
+        font-size: 4rem;
+        line-height: 48px;
+    }
+    @include respond(phone-min) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+.bg-color-blue-light {
+    color: rgba(255, 255, 255, 0.5);
+}
+.text-16 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-rgba-2;
+    font-weight: 400;
+    @include respond(tab-content) {
+        font-size: 4rem;
+        line-height: 4.8rem;
+    }
+    @include respond(phone-min) {
+        font-size: 12px;
+        line-height: 14px;  
+    }
+}

@@ -1,0 +1,198 @@
+.web {
+    padding-top: 3rem;
+    @include respond(big-1600) {
+        padding-top: 15rem;
+    }
+    @include respond(phone-min) {
+        padding-top: 5rem;
+    }
+    &__bg {
+        background: url('../img/web-main.jpg') center / cover no-repeat;
+        max-width: 100%;
+        height: auto;
+        border-radius: 70px;
+        @include respond(big-1600) {
+            border-radius: 50px;
+        }
+        @include respond(phone-min) {
+            border-radius: 16px;
+        }
+    }
+    &__bg-white {
+        background-color: $color-white;
+        border: 1px solid $color-blue;
+        border-radius: 70px;
+        @include respond(big-1600) {
+            border-radius: 50px;
+        }
+        @include respond(phone-min) {
+            border-radius: 16px;
+        }
+    }
+    &__bg-sites {
+        display: flex;
+        border: 1px solid $color-blue;
+        border-radius: 70px;
+        justify-content: space-between;
+        @include respond(big-1780) {
+            display: block;
+            width: 100%;
+            border-radius: 50px;
+        }
+        @include respond(phone-min) {
+            border-radius: 16px;
+        }
+    }
+    &__bg-technical {
+        background: url('../img/main-Technical.jpg') center / cover no-repeat;
+        max-width: 100%;
+        height: auto;
+        border-radius: 70px;
+        @include respond(big-1600) {
+            border-radius: 50px;
+        }
+        @include respond(phone-min) {
+            border-radius: 16px;
+        }
+    }
+    &__wrap {
+        padding: 5rem 12rem 10rem;
+        @include respond(big-1600) {
+            padding: 5rem 8rem 8rem;
+        }
+        @include respond(phone-min) {
+            padding: 3rem 1.4rem;
+        }
+    }
+    &__wrap-sites {
+        padding: 5rem 0 0 12rem;
+        @include respond(big-1600) {
+            padding: 5rem 8rem 0 8rem;
+        }
+        @include respond(phone-min) {
+            padding: 3rem 1.6rem 0 1.6rem;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30rem;
+        column-gap: 2rem;
+        row-gap: 25rem;
+        @include respond(big-1600) {
+            padding-top: 25rem;
+        }
+        @include respond(phone-min) {
+            row-gap: 5rem;
+        }
+        @include respond(phone-min) {
+            padding-top: 5rem;
+        }
+        &-container {
+            color: $color-white;
+            max-width: 800px;
+            @include respond(big-1600) {
+                max-width: 840px;
+            }
+            &_text {
+                padding-top: 5rem;
+                color: $color-white;
+                @include respond(big-1600) {
+                    padding-top: 10rem;
+                }
+                @include respond(phone-min) {
+                    padding-top: 3rem;
+                    color: $color-rgba-1;
+                }
+            }
+        }
+        &-item{
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    &__wrapper-sites {
+        padding-top: 24rem;
+        @include respond(big-1780) {
+            padding-top: 15rem;
+        }
+        @include respond(big-1600) {
+            padding-top: 25rem;
+        }
+        @include respond(phone-min) {
+            padding-top: 5rem;
+        }
+    }
+}
+
+.applications__title {
+    display: flex;
+    @include respond(phone-min) {
+        flex-wrap: wrap;
+    }
+    div {
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(203,202,243,1) 50%);
+        color: $color-light-black;
+        max-width: 624px;
+        @include respond(big-1600) {
+            max-width: 793px;
+        }
+        @include respond(phone-min) {
+            flex-wrap: wrap;
+            max-width: 256px;
+        }
+        @include respond(phone-420) {
+            max-width: 172px;
+            .applications-bg-span {
+                div {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
+}
+.applications-bg-span {
+    padding-right: 15px;
+        @include respond(phone-420) {
+            max-width: 110px;
+        }
+}
+.applications__text {
+    color: $color-light-black;
+}
+.technical-title {
+    color: $color-light-black;
+}
+.technical-text {
+    color: $color-light-black;
+}
+.sites-pt {
+    padding-top: 5rem;
+    @include respond(big-1600) {
+        padding-top: 25rem;
+    }
+    @include respond(phone-min) {
+        padding-top: 5rem;
+    }
+}
+.sites-img {
+    border-radius: 70px;
+    max-width: 100%;
+    margin-bottom: -4px;
+    img {
+        border-radius: 70px;
+        width: 931px;
+        height: 757px;
+        @include respond(big-1780) {
+            margin-top: 100px;
+            width: 100%;
+            height: auto;
+            border-radius: 50px
+        }
+        @include respond(phone-min) {
+            margin-top: 30px;
+            border-radius: 16px
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.main {
+    &__wrapper {
+        max-width: 978px;
+        @include respond(tab-content) {
+            max-width: 100%;
+        }
+        &-text {
+            padding: 5rem 0;
+            @include respond(tab-content) {
+                padding: 15rem 0 20rem 0;
+            }
+            @include respond(phone-min) {
+                padding: 2rem 0 4rem 0;
+                max-width: 288px;
+            }
+        }
+        &-inner {
+            display: flex;
+            align-items: center;
+            column-gap: 1.7rem;
+        }
+    }
+    &-title {
+        color: $color-light-black;
+    }
+}

@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Neue Machina' sans-serif;
+    font-weight: 400;
+    color: $color-light-black;
+    font-size: 62.5%;
+    @include respond(phone-min) {
+        font-size: 62.5%;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+button,
+button:active,
+button:focus {
+    border:none;
+}
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    @include respond(tab-content) {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 4rem;
+    }
+    @include respond(phone-min) {
+        padding: 0 1.5rem;
+    }
+}
+.container-two {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    @include respond(tab-content) {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 4rem;
+    }
+    @include respond(phone-min) {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+
+}

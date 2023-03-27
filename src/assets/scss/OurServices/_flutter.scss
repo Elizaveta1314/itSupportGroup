@@ -1,0 +1,137 @@
+.flutter {
+  margin: 0 auto;
+  overflow-x: scroll;
+  height: 305px;
+  padding: 20px 0;
+  transition: 1s all;
+  @include respond(phone-min) {
+      height: 190px;
+  }
+}
+.flutter-title {
+  padding-bottom: 7rem;
+  @include respond(phone-min) {
+      padding-bottom: 5rem;
+  }
+}
+.flutter:hover {
+  height: 365px;
+  @include respond(big-1600) {
+    height: 560px;
+  }
+  @include respond(phone-min) {
+      height: 183px;
+  }
+}
+.flutter::-webkit-scrollbar-track,
+.flutter::-webkit-scrollbar,
+.flutter::-webkit-scrollbar-thumb {
+  width: 0;
+}
+
+.flutter__wrapper-item {
+  position: relative;
+}
+.flutter__wrapper-item_img {
+  background: #EEEEEF;
+  border-radius: 40px;
+  width: 262px;
+  height: 262px;
+  cursor: pointer;
+  z-index: 0;
+  @include respond(phone-min) {
+    border-radius: 16px;
+  }
+  img {
+    width: 262px;
+    height: 262px;
+    @include respond(phone-min) {
+      width: 125px;
+      height: 125px;
+    }
+  }
+  @include respond(phone-min) {
+    width: 125px;
+    height: 125px;
+  }
+}
+.flutter__hover {
+  background: linear-gradient(86.55deg, #2E2BD0 -68.23%, #7876F2 165.71%);
+  border-radius: 50px;
+  width: 322px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  row-gap: 41px;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  visibility: hidden;
+  transition: .0s all;
+  z-index: 20;
+  @include respond(phone-min) {
+    width: 173px;
+    height: 173px;
+    padding: 20px 0;
+    row-gap: 26px;
+    border-radius: 26px;
+  }
+}
+.flutter__hover-padding {
+  padding: 40px 0;
+  @include respond(phone-min) {
+    padding: 10px 0;
+  }
+}
+.btn-hover {
+  border: 1.5px solid #fff;
+  background-color: inherit;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  @include respond(phone-min) {
+    width: 54px;
+    height: 54px;
+  }
+}
+.btn-hover::after {
+  position: absolute;
+  content: url('../img/btn-arrow/arrow-34-white.svg');
+  width: 32px;
+  height: 32px;
+  left: 31px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  @include respond(phone-min) {
+    content: url('../img/btn-arrow/arrow-20-white.svg');
+    width: 32px;
+    height: 32px;
+    left: 15px;
+    top: 32px;
+  }
+}
+.flutter__wrapper-item:hover .flutter__hover {
+  visibility: visible;
+}
+.flutter__wrapper { 
+  display: flex;
+  column-gap: 10px;
+  width: calc(250px * 12);
+  animation: scroll 40s linear infinite;
+}
+
+.flutter__wrapper:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 6));
+  }
+}

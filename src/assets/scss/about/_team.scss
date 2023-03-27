@@ -1,0 +1,108 @@
+.team {
+    &__img {
+        width: 100%;
+        margin-bottom: 10rem;
+        @include respond(big-1780) {
+            margin-bottom: 15rem;
+        }
+        @include respond(phone-min) {
+            margin-bottom: 5rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid $color-blue; 
+            border-radius: 70px;
+            @include respond(big-1780) {
+                border-radius: 50px;
+            }
+            @include respond(phone-min) {
+                border-radius: 16px;
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        @include respond(big-1780) {
+            display: block;
+            width: 100%;
+        }
+        &-item {
+            padding: 10rem 8.3rem 10rem 8.3rem;
+            border-right: 1px solid $color-blue;
+            min-width: 574px;
+            @include respond(big-1780) {
+                border-right: none;
+                border-bottom: 1px solid $color-blue;
+                padding: 12rem 0;
+                min-width: 100%;
+            }
+            @include respond(phone-min) {
+                padding: 3rem 0;
+            }
+            &-title {
+                padding: 10rem 0 3rem;
+                font-weight: 400;
+                @include respond(big-1780) {
+                    padding: 10rem 0 2rem;
+                }
+                @include respond(phone-min) {
+                    padding: 5rem 0 .5rem;
+                }
+            }
+        }
+        &-item:first-child {
+            @include respond(big-1780) {
+                padding: 0 0 12rem 0;
+            }
+            @include respond(phone-min) {
+                padding: 0 0 3rem 0;
+            }
+        }
+        &-item:last-child {
+            border: none;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 58px;
+        @include respond(big-1780) {
+            font-size: 80px;
+            line-height: 77px;
+
+        }
+        @include respond(phone-min) {
+            font-size: 26px;
+            line-height: 25px;
+        }
+    }
+}
+.headings {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10rem;
+    flex-wrap: wrap;
+    @include respond(phone-min) {
+        padding-bottom: 5rem;
+    }
+    &__text {
+        padding-top: 14rem;
+        margin-right: 7.1rem;
+        max-width: 714px;
+        text-align: left;
+        @include respond(big-1780) {
+            max-width: 100%;
+            margin-right: 0;
+            padding-top: 10rem;
+            font-size: 4rem;
+        }
+        @include respond(phone-min) {
+            padding-top: 3rem;
+            font-size: 12px;
+        }
+        span {
+            display: block;
+        } 
+    }
+}

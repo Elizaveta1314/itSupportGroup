@@ -1,0 +1,380 @@
+.btn {
+    padding: 20px 85px 20px 40px;
+    background: $color-blue;
+    border-radius: 10px;
+    color: $color-blue;
+    text-transform: uppercase;
+    position: relative;
+    max-width: 254px;
+    background-position-x: 100%;
+    transition: background 10s ease-out;
+    overflow: hidden;
+    a {
+        color: $color-white;
+    }
+    @include respond(tab-content) {
+        padding: 26px 94px 26px 40px;
+        border-radius: 20px;
+        max-width: 327px;
+    }
+    @include respond(phone-min) {
+        padding: 8px 0 8px 15px;
+        max-width: 117px;
+        border-radius: 6px;
+        width: 100%;
+    }
+    &::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-24-white.svg');
+        width: 24px;
+        height: 24px;
+        right: 41px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include respond(tab-content) {
+            content: url('../img/btn-arrow/arrow-34-white.svg');
+            width: 34px;
+            height: 34px;
+        }
+        @include respond(phone-min) {
+            content: url('../img/btn-arrow/arrow-12-white.svg');
+            width: 12px;
+            height: 12px;
+            right: 16px;
+        }
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $color-light-black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: 0.35s;
+    }
+} 
+.btn-text {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+.btn:hover:before {
+    transform: translateX(0);
+}
+.btn__circle-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    text-transform: uppercase;
+    @include respond(big-1600) {
+        column-gap: 4rem;
+        font-size: 40px;
+    }
+    @include respond(tab-content) {
+        column-gap: 5rem;
+    }
+    @include respond(phone-min) {
+        column-gap: 1rem;
+        font-size: 16px;
+    }
+}
+.btn__circle-wrap-color {
+    color: $color-light-black;
+}
+.contact-btn {
+    color: $color-light-black;
+}
+.btn-circle {
+    background: $color-blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition: .7s all;
+    ::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-34-white.svg');
+        width: 34px;
+        height: 34px;
+        left: 31px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+    }
+    @include respond(big-1600) {
+        width: 150px;
+        height: 150px;
+        ::after {
+            content: url('../img/btn-arrow/arrow-51-white.svg');
+            width: 51px;
+            height: 51px;
+            left: 46px;
+        }
+    }
+    @include respond(phone-min) {
+        width: 50px;
+        height: 50px;
+        ::after {
+            content: url('../img/btn-arrow/arrow-20-white.svg');
+            width: 20px;
+            height: 20px;
+            left: 15px;
+        }
+    }
+}
+.btn-circle:hover {
+    transform: scale(0.8);
+} 
+.btn-contact {
+    background: $color-blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition: .4s all;
+    ::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-34-white.svg');
+        width: 34px;
+        height: 34px;
+        left: 31px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+    }
+    @include respond(big-1600) {
+        width: 150px;
+        height: 150px;
+        ::after {
+            content: url('../img/btn-arrow/arrow-51-white.svg');
+            width: 51px;
+            height: 51px;
+            left: 46px;
+        }
+    }
+    @include respond(phone-min) {
+        width: 50px;
+        height: 50px;
+        ::after {
+            content: url('../img/btn-arrow/arrow-20-white.svg');
+            width: 20px;
+            height: 20px;
+            left: 15px;
+        }
+    }
+}
+.btn-contact:hover {
+    transform: scale(0.8);
+} 
+.btn__circle-big {
+    width: 28rem;
+    height: 28rem;
+    border: 2px solid $color-light-black;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    a {
+      padding: 101px 60px 101px 60px;
+      color: $color-light-black;
+
+    }
+}
+.btn__circle-big:hover {
+    transform: scale(0.8);
+} 
+.btn-hover {
+    border: 1.5px solid #fff;
+    background-color: inherit;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.btn-hover::after {
+    position: absolute;
+    content: url('../img/btn-arrow/arrow-34-white.svg');
+    width: 32px;
+    height: 32px;
+    left: 31px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+.btn_form {
+    max-width: 205px;
+    padding: 1.95rem 8.4rem 1.95rem 4rem;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    color: $color-blue;
+    position: relative;
+    background: $color-white;
+    border-radius: 10px;
+    overflow: hidden;
+    @include respond(phone-min) {
+        padding: .8rem 3.7rem .8rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 10px;
+        max-width: 9.3rem;
+    }
+    &::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-24-blue.svg');
+        width: 24px;
+        height: 24px;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        @include respond(phone-min) {
+            content: url('../img/btn-arrow/arrow-12-blue.svg');
+            width: 12px;
+            height: 12px;
+            right: 2rem;
+        }
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $color-light-black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: 0.35s;
+    }
+}
+.btn_slider {
+    padding: 1.95rem 8.4rem 1.95rem 4rem;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    color: $color-blue;
+    position: relative;
+    background: $color-white;
+    border-radius: 10px;
+    border: 1px solid $color-blue;
+    @include respond(big-1600) {
+        border: 2px solid $color-blue;
+        border-radius: 20px;
+        padding: 2.4rem 9.4rem 2.4rem 4rem;
+        font-size: 30px;
+    }
+    @include respond(tab-port) {
+        padding: .8rem 3.7rem .8rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    &::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-24-blue.svg');
+        width: 24px;
+        height: 24px;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        @include respond(big-1600) {
+            content: url('../img/btn-arrow/arrow-34-blue.svg');
+            width: 34px;
+            height: 34px;
+            right: 1.5rem;
+        }
+        @include respond(tab-port) {
+            content: url('../img/btn-arrow/arrow-12-blue.svg');
+            width: 12px;
+            height: 12px;
+
+        }
+    }
+}
+.btn_slider-hover {
+    padding: 1.95rem 8.4rem 1.95rem 4rem;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    color: $color-white;
+    position: relative;
+    border-radius: 10px;
+    background: inherit;
+    border: 1px solid $color-white;
+    @include respond(big-1600) {
+        padding: 2.4rem 9.4rem 2.4rem 4rem;
+        border: 2px solid $color-white;
+        font-size: 3rem;
+        line-height: 29px;
+        border-radius: 20px;
+    }
+    @include respond(tab-port) {
+        border: 1px solid $color-white;
+        border-radius: 6px;
+        padding: .8rem 3.7rem .8rem 1.5rem;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    &::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-24-white.svg');
+        width: 24px;
+        height: 24px;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        @include respond(big-1600) {
+            content: url('../img/btn-arrow/arrow-34-white.svg');
+            width: 34px;
+            height: 34px;
+            right: 1.5rem;
+        }
+        @include respond(tab-port) {
+            content: url('../img/btn-arrow/arrow-12-white.svg');
+            width: 12px;
+            height: 12px;
+
+        }
+    }
+}
+.slider-hover .btn_slider::after {
+    content: url('../img/btn-arrow/arrow-24-white.svg');
+}
+.btn-mobile_header {
+    padding: 2.8rem;
+    background-color: $color-blue;
+    border-radius: 20px;
+    width: 116px;
+    height: 116px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: url('../img/btn-arrow/arrow-60-white.svg');
+        width: 60px;
+        height: 60px;
+        left: 26px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+    }
+    @include respond(phone-min) {
+        padding: 1rem;
+        background-color: $color-blue;
+        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        &::after {
+            position: absolute;
+            content: url('../img/btn-arrow/arrow-20-white.svg');
+            width: 20px;
+            height: 20px;
+            left: 9px;
+        }
+    }
+}

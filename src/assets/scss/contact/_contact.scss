@@ -1,0 +1,427 @@
+.contact {
+    padding-top: 8rem;
+    @include respond(tab-land) {
+        padding-top: 15rem;
+    }
+    @include respond(phone-min ) {
+        padding-top: 5rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10rem;
+        @include respond(big-screen-min) {
+           flex-wrap: wrap; 
+           row-gap: 20rem;
+        }
+        @include respond(tab-land) {
+            padding-top: 20rem;
+        }
+        @include respond(phone-min ) {
+            padding-top: 5rem;
+            row-gap: 5rem;
+        }
+        &-strech {
+            position: sticky;
+            top: 135px;
+            max-width: 700px;
+            @include respond(tab-land) {
+                max-width: 100%;
+            }
+        }
+    }
+    &__link {
+        padding-top: 10rem;
+        font-family: 'Gilroy';
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 150%;
+        color: $color-rgba;
+        @include respond(tab-land) {
+            padding-top: 15rem;
+            font-size: 4rem;
+            line-height: 150%;
+            color: $color-light-black;
+        }
+        @include respond(phone-min ) {
+            padding-top: 3rem;
+            font-size: 12px;
+        }
+        a {
+           color: $color-blue;
+           border-bottom: 1px solid $color-blue;
+        }
+    } 
+}
+.dowload-contact {
+    a {
+        color: $color-light-black;
+        display:inline-block;
+        border: .1rem solid $color-light-black;
+        border-radius: 1rem;
+        padding: 1.95rem 8.4rem 1.95rem 4rem;
+        margin-top: 10rem;
+        text-transform: uppercase;
+        position: relative;
+        @include respond(tab-land) {
+            padding: 2.6rem 9.4rem 2.6rem 4rem;
+        }
+        @include respond(phone-min ) {
+            padding: .8rem 3.7rem .8rem 1.5rem;
+            border-radius: 6px;
+            margin-top: 3rem;
+        }
+    }
+    a::after {
+        cursor: pointer;
+        position: absolute;
+        content: url('../img/direct-inbox-black.png');
+        top: 50%;
+        transform: translateY(-50%);
+        right: 4rem;
+        width: 24px;
+        height: 24px;
+        @include respond(tab-land) {
+            content: url('../img/direct-inbox-34.png');
+            width: 34px;
+            height: 34px;
+        }
+        @include respond(phone-min ) {
+            content: url('../img/direct-inbox-black-12.png');
+            width: 12px;
+            height: 12px;
+            right: 1.5rem;
+        }
+    }
+
+}
+
+.form__contact {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 5.05rem;
+    margin-top: 194px;
+    @include respond( big-screen-min) {
+        margin-top: 0;
+    }
+    @include respond(tab-land) {
+        row-gap: 8rem;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    @include respond(phone-min ) {
+        row-gap: 2rem;
+    }
+    ::placeholder {
+        font-size: 3.2rem;
+        line-height: 150%;
+        color: rgba(47, 53, 63, 0.4);
+        font-weight: 400;
+        font-family: 'Neue Machina';
+        @include respond(phone-min ) {
+            font-size: 14px;
+        }
+    }
+    input {
+        background-color: inherit;
+        color: rgba(47, 53, 63, 0.4);
+        box-sizing: border-box; 
+        letter-spacing: 1px;
+        border: 0;
+        padding: 1.4rem 0;
+        border-bottom: 1px solid $color-light-black;
+        font-size: 3.2rem;
+        @include respond(tab-land) {
+            font-size: 4.2rem;
+        }
+        @include respond(phone-min ) {
+            font-size: 14px;
+        }   
+    }
+    input:focus {
+        outline: none;
+        font-size: 3.2rem;
+        @include respond(tab-land) {
+            font-size: 4.2rem;
+        }
+        @include respond(phone-min ) {
+            font-size: 14px;
+        }     
+    }
+    input:active {
+        outline: none;
+        font-size: 3.2rem;
+        @include respond(tab-land) {
+            font-size: 4.2rem;
+        }
+        @include respond(phone-min ) {
+            font-size: 14px;
+        }     
+    }
+    &-down {
+        label {
+            border: 0;
+            padding-bottom: 1.4rem;
+            border-bottom: 1px solid $color-light-black;
+            position: relative;
+            display: inline-block;
+            color: rgba(47, 53, 63, 0.4);
+            font-size: 3.2rem;
+            line-height: 150%;
+            font-weight: 400;
+            font-family: 'Neue Machina';
+            cursor: pointer;
+            transition: all .2s;
+            @include respond(phone-min ) {
+                font-size: 14px;
+            }
+            &::after {
+                position: absolute;
+                content: url('../img/add-square-black.png');
+                bottom: 5px;
+                right: 0;
+                @include respond(phone-min ) {
+                    content: url('../img/add-square-black-20.png');
+                }
+            }
+        }
+    }
+    &-title {
+        padding-top: 70px;
+        @include respond(phone-min ) {
+            padding-top: 50px;
+            padding-bottom: 25px;
+        }
+    }
+}
+.checkbox__style {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    @include respond(phone-min ) {
+        padding-left: 13px;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .checkbox__checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        border: 1px solid $color-light-black;
+        border-radius: 6px;
+        @include respond(phone-min ) {
+            height: 20px;
+            width: 20px;
+            border-radius: 4px;
+        }
+    }
+    .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 12.5px;
+        top: 0px;
+        width: 12px;
+        height: 27px;
+        border: solid $color-light-black;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        opacity: 0;
+        -webkit-transition: opacity 0.25s ease;
+        -o-transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease;
+        @include respond(phone-min ) {
+            left: 4.5px;
+            top: 0px;
+            width: 6px;
+            height: 12px;
+        }
+      }
+}
+.checkbox__style input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
+.checkbox__body {
+    margin-left: 30px;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-rgba;
+    @include respond(tab-land) {
+        font-size: 40px;
+    }
+    @include respond(phone-min ) {
+        font-size: 12px;
+    }
+    &-link {
+        border-bottom: 1px solid $color-blue;
+    }
+}
+.irs {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    @include respond(phone-min ) {
+        font-size: 12px;
+    }
+}
+.irs-from {
+    @include respond(phone-min ) {
+        font-size: 12px;
+    }
+    &::after {
+        content: "$";
+        margin-left: 5px;
+        @include respond(phone-min ) {
+            font-size: 12px;
+        }
+    }
+}
+.irs-to {
+    &::after {
+        content: "$";
+        margin-left: 5px;
+    }
+}
+.irs-line {
+    &::after {
+        content: "";
+        border: 2px solid #2E2BD0;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+        display: block;
+        @include respond(phone-min ) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+.irs-min {
+    &::after {
+        content: "$";
+        margin-left: 5px;
+    }
+    @include respond(phone-min ) {
+        margin-left: 0px;
+    }
+    &::before{
+        content: "";
+        border: 2px solid #2E2BD0;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+        display: block;
+        transform: translateY(-144%) translateX(-3px);
+        @include respond(phone-min ) {
+            width: 16px;
+            height: 16px;
+            transform: translateY(-32%) translateX(-3px);
+        }
+    }
+}
+.irs-max {
+    &::after {
+        content: "$";
+        margin-left: 5px;
+        @include respond(phone-min ) {
+            margin-left: 0px;
+        }
+    }
+    &::before{
+        content: "";
+        border: 2px solid #2E2BD0;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+        display: block;
+        transform: translateY(-144%) translateX(61px);
+        @include respond(phone-min ) {
+            width: 16px;
+            height: 16px;
+            transform: translateY(-32%) translateX(35px);
+        }
+    }
+}
+.irs--flat {
+    height: 40px;
+    margin-bottom: 20px;
+}
+.irs--flat .irs-bar {
+    display: none;
+}
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    color: $color-blue;;
+    font-size: 18px;
+    line-height: 150%;
+    padding: 0px 0px;
+    transform: translateX(-10px) translateY(-14px);
+    background-color: inherit;
+    border-radius: 4px;
+    @include respond(phone-min ) {
+        font-size: 12px;
+        transform: translateX(-1px) translateY(-5px);
+    }
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    top: 48px;
+    padding: 1px 3px;
+    color: $color-rgba;
+    background-color: initial;
+    visibility: visible !important;
+    @include respond(phone-min ) {
+        top: 20px;
+        font-size: 12px;
+    }
+}
+.irs--flat .irs-line {
+    top: 25px;
+    height: 2px;
+    background-color: $color-blue;
+    border-radius: 4px;
+    @include respond(phone-min ) {
+        top: 23px;
+    }
+}
+.irs--flat .irs-handle {
+    top: 13px;
+    width: 30px;
+    height: 30px;
+    background: $color-blue;
+    border-radius: 6px;
+    @include respond(phone-min ) {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+    }
+
+}
+.irs--flat .irs-handle > i:first-child {
+    background-color: $color-blue;
+}
+.irs--flat .irs-handle.state_hover > i:first-child, .irs--flat .irs-handle:hover > i:first-child {
+    background-color: $color-blue;
+}

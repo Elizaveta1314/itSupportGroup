@@ -1,0 +1,353 @@
+.support {
+    &-title {
+        max-width: 540px;
+        @include respond(big-1600) {
+            max-width: 100%;
+        }
+    }
+    &-text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        font-family: 'Gilroy';
+        color: $color-rgba;
+        margin: 5rem 27rem 10rem 0;
+        display: flex;
+        justify-content: flex-end;
+        @include respond(big-1600) {
+            font-size: 40px;
+            margin: 10rem 0 10rem 0;
+            justify-content: flex-start;
+        }
+        @include respond(phone-min) {
+            font-size: 12px;
+            margin: 3rem 0 5rem 0;
+        }
+        p {
+            max-width: 714px;
+            @include respond(big-1600) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.content::-webkit-scrollbar-track,
+.content::-webkit-scrollbar,
+.content::-webkit-scrollbar-thumb {
+  width: 0;
+}
+.years {
+    background: linear-gradient(65.7deg, #2E2BD0 -67.89%, #7876F2 125.28%);
+    border-radius: 70px;
+    height: 757px;
+    padding: 150px 118px 100px;
+    @include respond(tab-land ) {
+        border-radius: 50px;
+        height: 1220px;
+        padding: 8rem 0 8rem;
+    }
+    @include respond(phone-min) {
+        border-radius: 16px;
+        height: 457px;
+        padding: 3rem 15rem 3rem;
+    }
+    @include respond(phone) {
+        padding: 3rem 0rem 3rem;
+    }
+    
+}
+.content {
+    height: 500px;
+    overflow-x: auto;
+    @include respond(tab-land ) {
+        height: 1220px;
+    }
+    @include respond(phone-min) {
+        height: 457px;
+    }
+}
+
+.years_numbers {
+    display: flex;
+    column-gap: 172px;
+    margin-left: 53px;
+    @include respond(tab-land ) {
+        column-gap: 166px;
+        margin-left: 18px;
+    }
+    @include respond(phone-min) {
+        column-gap: 83px;
+        margin-left: 16px;
+    }
+    @include respond(phone) {
+        column-gap: 84px;
+        margin-left: 16px;
+    }
+}
+.numbers {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 58px;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    transition: .3s all;
+    @include respond(tab-land ) {
+        font-size: 80px;
+        line-height: 77px;
+    }
+    @include respond(phone-min) {
+        font-size: 22px;
+        line-height: 21px;
+    }
+}
+
+.numbers:hover{
+    color: #fff;
+    font-size: 80px;
+    line-height: 77px;
+    @include respond(tab-land ) {
+        font-size: 100px;
+        line-height: 96px;
+    }
+    @include respond(phone-min) {
+        font-size: 28px;
+        line-height: 27px;
+    }
+}
+.numbers:hover .line-big {
+    border: 4px solid #FFFFFF;
+    border-radius: 10px;
+}
+.years_line {
+    display: flex;
+    column-gap: 27px;
+    padding-top: 50px;
+    align-items: center;
+    @include respond(tab-land ) {
+        padding-top: 50px;
+        column-gap: 30px;
+    }
+    @include respond(phone-min) {
+        padding-top: 17px;
+        column-gap: 10px;
+    }
+}
+.line {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 110px;
+    @include respond(tab-land ) {
+        height: 376px;
+    }
+    @include respond(phone-min) {
+        height: 126px;
+    }
+}
+.line-big {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 150px;
+    @include respond(tab-land ) {
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        height: 171px;
+    }
+}
+
+.block {
+    display: none;
+    position: absolute;
+    bottom: -400px;
+    left: 90px;
+    font-size: 24px;
+    width: 500px;
+    line-height: 150%;
+    @include respond(tab-land ) {
+        width: 960px;
+        font-weight: 400;
+        font-size: 40px;
+        bottom: -950px;
+        left: 5px;
+    }
+    @include respond(phone-min) {
+        width: 267px;
+        bottom: -350px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+.numbers:hover .block {
+    display: block;
+}
+.numbers:hover .number-22  {
+    display: block;
+}
+.number-22 {
+    display: none;
+    position: absolute;
+    bottom: -400px;
+    right: 0px;
+    font-size: 24px;
+    width: 500px;
+    line-height: 150%;
+    @include respond(tab-land ) {
+        width: 960px;
+        font-weight: 400;
+        font-size: 40px;
+        bottom: -950px;
+        right: 20px;
+    }
+    @include respond(phone-min) {
+        width: 267px;
+        bottom: -350px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+.line-big-active {
+    color:#fff;
+}
+.block-text,
+.block-text-13,
+.block-text-15,
+.block-text-18,
+.block-text-20,
+.block-text-22 {
+    position: relative;
+}
+.block-text-15,
+.block-text-18,
+.block-text-20 {
+    @include respond(phone) {
+        transform: translateX(-102px);
+    }
+}
+.block-text-22::before {
+    position: absolute;
+    content: '';
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+    height: 150px;
+    top: -170px;
+    right: 130px;
+    @include respond(tab-land ) {
+        bottom: 0px;
+        top: -60rem;
+        right: 160px;
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        height: 171px;
+        border-left: 2px solid #fff;
+        height: 171px;
+        top: -207px;
+        right: 31px;
+    }
+    @include respond(phone) {
+        top: -207px;
+        right: 35px;
+    }
+}
+.block-text-13::before {
+    position: absolute;
+    content: '';
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+    height: 150px;
+    top: -170px;
+    left: -27px;
+    @include respond(tab-land ) {
+        bottom: 0px;
+        top: -60rem;
+        left: 103px;
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        border-left: 2px solid #fff;
+        height: 171px;
+        top: -207px;
+        left: 27px;
+    }
+    @include respond(phone) {
+        top: -207px;
+        left: 27px;
+    }
+}
+.block-text-15::before {
+    position: absolute;
+    content: '';
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+    height: 150px;
+    top: -170px;
+    left: -5px;
+    @include respond(tab-land ) {
+        bottom: 0px;
+        top: -60rem;
+        left: 120px;
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        height: 171px;
+        border-left: 2px solid #fff;
+        height: 171px;
+        top: -207px;
+        left: 32px;
+    }
+    @include respond(phone) {
+        top: -207px;
+        left: 134px;
+    }
+}
+.block-text-18::before {
+    position: absolute;
+    content: '';
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+    height: 150px;
+    top: -170px;
+    left: -10px;
+    @include respond(tab-land ) {
+        bottom: 0px;
+        top: -60rem;
+        left: 101px;
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        height: 171px;
+        border-left: 2px solid #fff;
+        height: 171px;
+        top: -207px;
+        left: 25px;
+    }
+    @include respond(phone) {
+        top: -207px;
+        left: 125px;
+    }
+}
+.block-text-20::before {
+    position: absolute;
+    content: '';
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+    height: 150px;
+    top: -170px;
+    left: 15px;
+    @include respond(tab-land ) {
+        bottom: 0px;
+        top: -60rem;
+        left: 115px;
+        height: 513px;
+    }
+    @include respond(phone-min) {
+        height: 171px;
+        border-left: 2px solid #fff;
+        height: 171px;
+        top: -207px;
+        left: 30px;
+    }
+    @include respond(phone) {
+        top: -207px;
+        left: 129px;
+    }
+}
