@@ -77,31 +77,51 @@ header {
     height: 116px;
     border-radius: 20px;
     padding: 45px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: inline-block;
     background-color: $color-blue;
+    position: relative;
     @include respond(phone-min) {
         width: 40px;
         height: 40px;
         padding: 16px 12px;
         border-radius: 10px;
     }
-    &-line {
+    span {
+        position: absolute;
         height: 2.5px;
         background-color: $color-white;
-        margin-bottom: 12.5px;
         border-radius: 20px;
+        width: 45px;
+        left: 34px;
+        top: 55px;
+        transition: transform .5s, opacity .5s;
         @include respond(phone-min) {
             height: 1px;
-            margin-bottom: 4px;
+            width: 15px;
+            left: 12px;
+            top: 19px;
         }
     }
-    &-line:last-child {
-        margin-bottom: 0;
+}
+.humburger span:nth-child(1) {
+    transform: translateY(-12.5px);
+    @include respond(phone-min) {
+        transform: translateY(-5px);
     }
+}
+.humburger span:nth-child(3) {
+    transform: translateY(12.5px);
+    @include respond(phone-min) {
+        transform: translateY(5px);
+    }
+}
+.header__mobile.open .humburger span:nth-child(2) {
+    opacity: 0;
+}
+.header__mobile.open .humburger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+.header__mobile.open .humburger span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 .logo-mobile {
     img {
@@ -118,4 +138,69 @@ header {
     border: 1px solid $color-blue;
     border-radius: 10px;
     color: $color-blue;
+}
+
+.hed-mobile {
+    background: url('../img/BG_Noise.jpg') center / cover no-repeat;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: 200;
+    transition: transform .5s;
+    height: 568px;
+    &-wrapper {
+        padding: 30px 0; 
+        
+    }
+    &_line {
+        height: 1px;
+        background-color: rgba(47, 53, 63, 0.3);
+        margin-top: 30px;
+    }
+    &__wrapper-nav_link {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+        text-transform: lowercase;
+        a {
+            color: $color-light-black;
+        }
+    }
+    &__lang {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        &-text {
+            font-size: 16px;
+            line-height: 15px;
+            text-transform: lowercase;
+        }
+        &-en {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 15px;
+            text-align: right;
+            text-transform: uppercase;
+            color: $color-blue;
+        }
+    }
+    &_policy {
+        margin-top: 220px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+        text-transform: lowercase;
+        &-mt {
+            margin-top: 20px;
+        }
+    }
+}
+// .open {
+//     transform: translateX(100%);
+// }
+.header__mobile.open .hed-mobile{
+    transform: translateX(100%);
 }

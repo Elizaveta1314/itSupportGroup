@@ -1,5 +1,5 @@
 //= components/tabs.js
-//= components/ticker.js
+//= components/burger.js
 //= components/slick-slider.js
 $(".js-range-slider").ionRangeSlider({
     min: 100,
@@ -7,10 +7,10 @@ $(".js-range-slider").ionRangeSlider({
     from: 550
 });
 
-// const slider = document.querySelector('.content');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
+const slider = document.querySelector('.content');
+let isDown = false;
+let startX;
+let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
@@ -33,3 +33,8 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
 });
+
+
+
+
+console.log(123);

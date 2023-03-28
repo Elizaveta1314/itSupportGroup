@@ -203,12 +203,8 @@ header {
     height: 116px;
     border-radius: 20px;
     padding: 45px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: inline-block;
     background-color: #2E2BD0;
+    position: relative;
 }
 
 @media (max-width: 850px) {
@@ -220,22 +216,56 @@ header {
     }
 }
 
-.humburger-line {
+.humburger span {
+    position: absolute;
     height: 2.5px;
     background-color: #fff;
-    margin-bottom: 12.5px;
     border-radius: 20px;
+    width: 45px;
+    left: 34px;
+    top: 55px;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 @media (max-width: 850px) {
-    .humburger-line {
+    .humburger span {
         height: 1px;
-        margin-bottom: 4px;
+        width: 15px;
+        left: 12px;
+        top: 19px;
     }
 }
 
-.humburger-line:last-child {
-    margin-bottom: 0;
+.humburger span:nth-child(1) {
+    transform: translateY(-12.5px);
+}
+
+@media (max-width: 850px) {
+    .humburger span:nth-child(1) {
+        transform: translateY(-5px);
+    }
+}
+
+.humburger span:nth-child(3) {
+    transform: translateY(12.5px);
+}
+
+@media (max-width: 850px) {
+    .humburger span:nth-child(3) {
+        transform: translateY(5px);
+    }
+}
+
+.header__mobile.open .humburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__mobile.open .humburger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header__mobile.open .humburger span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 
 .logo-mobile img {
@@ -255,6 +285,77 @@ header {
     border: 1px solid #2E2BD0;
     border-radius: 10px;
     color: #2E2BD0;
+}
+
+.hed-mobile {
+    background: url("../img/BG_Noise.jpg") center/cover no-repeat;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: 200;
+    transition: transform 0.5s;
+    height: 568px;
+}
+
+.hed-mobile-wrapper {
+    padding: 30px 0;
+}
+
+.hed-mobile_line {
+    height: 1px;
+    background-color: rgba(47, 53, 63, 0.3);
+    margin-top: 30px;
+}
+
+.hed-mobile__wrapper-nav_link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: lowercase;
+}
+
+.hed-mobile__wrapper-nav_link a {
+    color: #2F353F;
+}
+
+.hed-mobile__lang {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hed-mobile__lang-text {
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: lowercase;
+}
+
+.hed-mobile__lang-en {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #2E2BD0;
+}
+
+.hed-mobile_policy {
+    margin-top: 220px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: lowercase;
+}
+
+.hed-mobile_policy-mt {
+    margin-top: 20px;
+}
+
+.header__mobile.open .hed-mobile {
+    transform: translateX(100%);
 }
 
 .footer__wrapper {
@@ -2829,6 +2930,7 @@ header {
 
 .hover-link-5 {
     transition: 0.4s all;
+    color: #fff;
 }
 
 .hover-link-5:hover {
@@ -3671,7 +3773,7 @@ input:active {
 
 @media (max-width: 1600px) {
     .flutter:hover {
-        height: 560px;
+        height: 365px;
     }
 }
 

@@ -17,7 +17,7 @@
 .flutter:hover {
   height: 365px;
   @include respond(big-1600) {
-    height: 560px;
+    height: 365px;
   }
   @include respond(phone-min) {
       height: 183px;

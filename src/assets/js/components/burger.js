@@ -24,3 +24,16 @@
 //   const walk = (x - startX) * 3; //scroll-fast
 //   slider.scrollLeft = scrollLeft - walk;
 // });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.getElementById("#burger").addEventListener("click", function() {
+//         document.querySelector("header__mobile").classList.toggle("open");
+//     });
+// });
+
+
+$(document).ready(function() {
+    $('.humburger').click(function(event) {
+        $('.humburger, .header__mobile').toggleClass('open');
+    });
+});

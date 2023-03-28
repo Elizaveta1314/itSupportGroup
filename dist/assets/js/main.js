@@ -78,6 +78,19 @@ tabs();
 //   const walk = (x - startX) * 3; //scroll-fast
 //   slider.scrollLeft = scrollLeft - walk;
 // });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.getElementById("#burger").addEventListener("click", function() {
+//         document.querySelector("header__mobile").classList.toggle("open");
+//     });
+// });
+
+
+$(document).ready(function() {
+    $('.humburger').click(function(event) {
+        $('.humburger, .header__mobile').toggleClass('open');
+    });
+});
 $('.slider').slick({
 	slidesToShow:3,
 	appendArrows: $('.clients__arrow'),
@@ -106,10 +119,10 @@ $(".js-range-slider").ionRangeSlider({
     from: 550
 });
 
-// const slider = document.querySelector('.content');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
+const slider = document.querySelector('.content');
+let isDown = false;
+let startX;
+let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
@@ -132,3 +145,8 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
 });
+
+
+
+
+console.log(123);
