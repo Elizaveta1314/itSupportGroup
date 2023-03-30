@@ -115,11 +115,13 @@
 }
 .hover-link-5 {
     transition: .4s all;
-    color: #fff;
 } 
 .hover-link-5:hover {
     transform: translateY(-5px);
 }
 .bg {
     background: url('../img/BG_Noise.jpg') center / cover no-repeat;
+}
+.color-white {
+    color: $color-white;
 }

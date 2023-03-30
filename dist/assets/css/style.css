@@ -2930,7 +2930,6 @@ header {
 
 .hover-link-5 {
     transition: 0.4s all;
-    color: #fff;
 }
 
 .hover-link-5:hover {
@@ -2939,6 +2938,10 @@ header {
 
 .bg {
     background: url("../img/BG_Noise.jpg") center/cover no-repeat;
+}
+
+.color-white {
+    color: #fff;
 }
 
 .form {
