@@ -2327,6 +2327,7 @@ header {
     padding: 5rem 4.6rem 7rem 5rem;
     color: #2F353F;
     height: 174px;
+    transition: 0.4s all;
 }
 
 @media (max-width: 1600px) {
@@ -2383,6 +2384,7 @@ header {
     min-width: 540px;
     cursor: pointer;
     height: 174px;
+    transition: 0.4s all;
 }
 
 @media (max-width: 1600px) {

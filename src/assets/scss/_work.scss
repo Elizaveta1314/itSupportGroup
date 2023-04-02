@@ -16,6 +16,7 @@
             padding: 5rem 4.6rem 7rem 5rem;
             color: $color-light-black;
             height: 174px;
+            transition: .4s all;
             @include respond(big-1600) {
                 max-width: 100%;
                 padding: 0rem 5rem 8rem 0rem;
@@ -58,6 +59,7 @@
             min-width: 540px;
             cursor: pointer;
             height: 174px; 
+            transition: .4s all;
             @include respond(big-1600) {
                 padding: 5rem;
                 border-radius: 50px;
